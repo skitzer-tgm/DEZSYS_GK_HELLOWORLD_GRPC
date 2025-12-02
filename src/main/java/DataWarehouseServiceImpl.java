@@ -19,7 +19,8 @@ public class DataWarehouseServiceImpl extends DataWarehouseServiceGrpc.DataWareh
                 .setWarehouseCity("Salzburg")
                 .addProductData(product1)
                 .build();
-
+        System.out.println("Anfrage bekommen: " + request);
+        System.out.println("Anfrage gefunden: " + response);
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
